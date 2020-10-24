@@ -14,7 +14,7 @@
     "lint": "eslint --color --config .eslintrc.js --ext .ts .eslintrc.js gulpfile.ts src",
     "build": "gulp build",
     "prepublish": "false",
-    "publish": "gulp publish"
+    "publish:npm": "gulp publish"
   },
   "devDependencies": {
     "@types/del": "^4.0.0",

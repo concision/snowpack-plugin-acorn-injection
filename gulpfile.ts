@@ -50,7 +50,7 @@ class Gulpfile {
      */
     @Task("lint")
     public lintTask(): void {
-        return run("yarn run lint", {cwd: __dirname}).exec();
+        return run("yarn run lint", {cwd: __dirname, verbosity: 3}).exec();
     }
 
     /**
@@ -128,6 +128,10 @@ class Gulpfile {
      */
     @Task("publish:npm")
     public async publishNpm(): Promise<void> {
-        return run("yarn publish dist", {cwd: __dirname}).exec();
+        // read package.json
+        const packageJson = JSON.parse(readFileSync(path.resolve(__dirname, "package.json"), "utf8"));
+
+        // publish package
+        return run(`yarn publish --color=always --new-version ${packageJson["version"]} dist`, {cwd: __dirname, verbosity: 3}).exec();
     }
 }
