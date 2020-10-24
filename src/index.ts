@@ -7,7 +7,7 @@ export interface PluginOptions {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default <SnowpackPluginFactory<PluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: PluginOptions): SnowpackPlugin => {
+module.exports = <SnowpackPluginFactory<PluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: PluginOptions): SnowpackPlugin => {
     return {
         name: "snowpack-acorn-stage3-plugin",
         config(snowpackConfig: SnowpackConfig): void {
