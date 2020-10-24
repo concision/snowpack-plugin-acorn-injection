@@ -5,7 +5,8 @@
   "author": "Concision <contact@concision.me>",
   "license": "MIT",
   "repository": "https://github.com/concision/snowpack-acorn-inject-plugin.git",
-  "main": "index.js",
+  "main": "src/index.ts",
+  "typings": "src/index.d.ts",
   "scripts": {
     "lint": "eslint --color --config .eslintrc.js --ext .ts .eslintrc.js src",
     "build": "tsc"
