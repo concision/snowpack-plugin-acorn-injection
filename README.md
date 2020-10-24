@@ -3,10 +3,9 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/concision/ snowpack-acorn-inject-plugin
+    <a href="https://github.com/concision/snowpack-acorn-inject-plugin
 /blob/master/LICENSE">
-        <img alt="repository license" src="https://img.shields.io/github/license/concision/snowpack-acorn-inject-plugin
-?style=for-the-badge"/>
+        <img alt="repository license" src="https://img.shields.io/github/license/concision/snowpack-acorn-inject-plugin?style=for-the-badge"/>
     </a>
     <a href="https://www.npmjs.com/package/snowpack-acorn-inject-plugin">
         <img alt="repository license" src="https://img.shields.io/npm/v/snowpack-acorn-inject-plugin?color=red&logo=npm&style=for-the-badge"/>
