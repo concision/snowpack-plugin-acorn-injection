@@ -2,15 +2,16 @@ import {SnowpackConfig, SnowpackPlugin, SnowpackPluginFactory} from "snowpack";
 import {InputOptions, Plugin as RollupPlugin} from "rollup";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface PluginOptions {
+export interface SnowpackAcornInjectPluginOptions {
     acorns?: string[];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-module.exports = <SnowpackPluginFactory<PluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: PluginOptions): SnowpackPlugin => {
+module.exports = <SnowpackPluginFactory<SnowpackAcornInjectPluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: SnowpackAcornInjectPluginOptions): SnowpackPlugin => {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const acorns: Function[] = [];
     if (Array.isArray(pluginOptions?.acorns)) {
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
         for (const name of pluginOptions!.acorns) {
             // eslint-disable-next-line @typescript-eslint/no-var-requires,@typescript-eslint/ban-types
             acorns.push(<Function>require(name));
