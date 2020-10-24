@@ -4,7 +4,7 @@ declare const SnowpackAcornInjectPluginFactory: SnowpackPluginFactory<SnowpackAc
 
 declare namespace SnowpackAcornInjectPluginFactory {
     export interface SnowpackAcornInjectPluginOptions {
-        acorns?: string[];
+        plugins?: string[];
     }
 }
 
