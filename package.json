@@ -1,7 +1,7 @@
 {
   "name": "snowpack-acorn-inject-plugin",
   "version": "0.1.0",
-  "description": "Snowpack plugin to inject acorn plugins into Rollup's configuration",
+  "description": "Snowpack plugin to inject Acorn plugins into Rollup's configuration",
   "author": "Concision <contact@concision.me>",
   "license": "MIT",
   "repository": "https://github.com/concision/snowpack-acorn-inject-plugin.git",
