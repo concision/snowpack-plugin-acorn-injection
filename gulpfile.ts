@@ -120,7 +120,7 @@ class Gulpfile {
      */
     @SequenceTask("publish")
     public publishTask(): string[] {
-        return ["build", "publish-npm"];
+        return ["build", "publish:npm"];
     }
 
     /**
