@@ -27,6 +27,8 @@ class Gulpfile {
     private readonly target: string = path.resolve(__dirname, this.project.config.compilerOptions.outDir);
 
 
+    // build
+
     /**
      * Build project
      */
@@ -34,8 +36,6 @@ class Gulpfile {
     public buildTask(): string[] {
         return ["clean", "lint", "transpile", "includes", "package"];
     }
-
-    // tasks
 
     /**
      * Delete {@link target} directory
@@ -50,11 +50,11 @@ class Gulpfile {
      */
     @Task("lint")
     public lintTask(): void {
-        return run("yarn run lint").exec();
+        return run("yarn run lint", {cwd: __dirname}).exec();
     }
 
     /**
-     * Transpile TypeScpript project sources
+     * Transpile TypeScript project sources
      */
     @Task("transpile")
     public transpileTask(): unknown {
@@ -111,5 +111,23 @@ class Gulpfile {
             path.resolve(this.target, "package.json"),
             JSON.stringify(packageJson, null, "  "),
         );
+    }
+
+    // publish
+
+    /**
+     * Build and publish distributed files
+     */
+    @SequenceTask("publish")
+    public publishTask(): string[] {
+        return ["build", "publish-npm"];
+    }
+
+    /**
+     * Publish package to NPM
+     */
+    @Task("publish:npm")
+    public async publishNpm(): Promise<void> {
+        return run("yarn publish dist", {cwd: __dirname}).exec();
     }
 }
