@@ -11,8 +11,8 @@
     "node": ">=10"
   },
   "scripts": {
-    "lint": "eslint --color --config .eslintrc.js --ext .ts .eslintrc.js src",
-    "build": "tsc"
+    "lint": "eslint --color --config .eslintrc.js --ext .ts .eslintrc.js gulpfile.ts src",
+    "build": "gulp build"
   },
   "devDependencies": {
     "@types/del": "^4.0.0",
