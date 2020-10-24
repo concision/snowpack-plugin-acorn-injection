@@ -19,11 +19,11 @@ module.exports = <SnowpackPluginFactory<SnowpackAcornInjectPluginOptions>>((snow
     }
 
     return {
-        name: "snowpack-acorn-inject-plugin",
+        name: "snowpack-acorn-injection-plugin",
         config(snowpackConfig: SnowpackConfig): void {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             (snowpackConfig.installOptions.rollup!.plugins ??= []).push(<RollupPlugin>{
-                name: "rollup-acorn-inject-plugin",
+                name: "rollup-acorn-injection-plugin",
                 options: (options: InputOptions): InputOptions => {
                     if (acornPlugins.length !== 0) {
                         if (Array.isArray(options.acornInjectPlugins)) { // Function[]
