@@ -1,9 +1,9 @@
 import {SnowpackPluginFactory} from "snowpack";
 
-declare const SnowpackAcornInjectPluginFactory: SnowpackPluginFactory<SnowpackAcornInjectPluginFactory.SnowpackAcornInjectPluginOptions>;
+declare const AcornInjectionSnowpackPluginFactory: SnowpackPluginFactory<AcornInjectionSnowpackPluginFactory.AcornInjectionSnowpackPluginOptions>;
 
-declare namespace SnowpackAcornInjectPluginFactory {
-    export interface SnowpackAcornInjectPluginOptions {
+declare namespace AcornInjectionSnowpackPluginFactory {
+    export interface AcornInjectionSnowpackPluginOptions {
         plugins?: string[];
     }
 }

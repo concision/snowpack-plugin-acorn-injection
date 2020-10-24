@@ -2,12 +2,12 @@ import {SnowpackConfig, SnowpackPlugin, SnowpackPluginFactory} from "snowpack";
 import {InputOptions, Plugin as RollupPlugin} from "rollup";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
-export interface SnowpackAcornInjectPluginOptions {
+export interface AcornInjectionSnowpackPluginOptions {
     plugins?: string[];
 }
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-module.exports = <SnowpackPluginFactory<SnowpackAcornInjectPluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: SnowpackAcornInjectPluginOptions): SnowpackPlugin => {
+module.exports = <SnowpackPluginFactory<AcornInjectionSnowpackPluginOptions>>((snowpackConfig: SnowpackConfig, pluginOptions?: AcornInjectionSnowpackPluginOptions): SnowpackPlugin => {
     // eslint-disable-next-line @typescript-eslint/ban-types
     const acornPlugins: Function[] = [];
     if (Array.isArray(pluginOptions?.plugins)) {
@@ -19,11 +19,11 @@ module.exports = <SnowpackPluginFactory<SnowpackAcornInjectPluginOptions>>((snow
     }
 
     return {
-        name: "snowpack-acorn-injection-plugin",
+        name: "snowpack-plugin-acorn-injection",
         config(snowpackConfig: SnowpackConfig): void {
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             (snowpackConfig.installOptions.rollup!.plugins ??= []).push(<RollupPlugin>{
-                name: "rollup-acorn-injection-plugin",
+                name: "rollup-plugin-acorn-injection",
                 options: (options: InputOptions): InputOptions => {
                     if (acornPlugins.length !== 0) {
                         if (Array.isArray(options.acornInjectPlugins)) { // Function[]

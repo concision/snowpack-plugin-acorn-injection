@@ -3,15 +3,15 @@
 </h1>
 
 <p align="center">
-    <a href="https://github.com/concision/snowpack-acorn-injection-plugin
+    <a href="https://github.com/concision/snowpack-plugin-acorn-injection
 /blob/master/LICENSE">
-        <img alt="repository license" src="https://img.shields.io/github/license/concision/snowpack-acorn-injection-plugin?style=for-the-badge"/>
+        <img alt="repository license" src="https://img.shields.io/github/license/concision/snowpack-plugin-acorn-injection?style=for-the-badge"/>
     </a>
-    <a href="https://www.npmjs.com/package/snowpack-acorn-injection-plugin">
-        <img alt="repository license" src="https://img.shields.io/npm/v/snowpack-acorn-injection-plugin?color=red&logo=npm&style=for-the-badge"/>
+    <a href="https://www.npmjs.com/package/snowpack-plugin-acorn-injection">
+        <img alt="repository license" src="https://img.shields.io/npm/v/snowpack-plugin-acorn-injection?color=red&logo=npm&style=for-the-badge"/>
     </a>
-    <a href="https://bundlephobia.com/result?p=snowpack-acorn-injection-plugin">
-        <img alt="repository license" src="https://img.shields.io/bundlephobia/min/snowpack-acorn-injection-plugin?color=green&label=Size&logo=node.js&logoColor=green&style=for-the-badge"/>
+    <a href="https://bundlephobia.com/result?p=snowpack-plugin-acorn-injection">
+        <img alt="repository license" src="https://img.shields.io/bundlephobia/min/snowpack-plugin-acorn-injection?color=green&label=Size&logo=node.js&logoColor=green&style=for-the-badge"/>
     </a>
 </p>
 
@@ -46,11 +46,11 @@ Installing the plugin as a Node.js development dependency can be done with any o
 
 - [npm](https://docs.npmjs.com/cli/npm):
   ```
-  npm install --save-dev snowpack-acorn-injection-plugin
+  npm install --save-dev snowpack-plugin-acorn-injection
   ```
 - [Yarn](https://yarnpkg.com/):
   ```
-  yarn add --dev snowpack-acorn-injection-plugin
+  yarn add --dev snowpack-plugin-acorn-injection
   ```
 
 ### Plugin Options
@@ -70,7 +70,7 @@ For example, injecting [`acorn-stage3`](https://github.com/acornjs/acorn-stage3)
   ...
   "plugins": [
     [
-      "snowpack-acorn-injection-plugin",
+      "snowpack-plugin-acorn-injection",
       {
         "plugins": [
           "acorn-stage3"
